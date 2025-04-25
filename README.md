@@ -4,9 +4,6 @@
 <img src="assets/browserstack-logo.png" alt="BrowserStack Logo" height="100"> <img src="assets/mcp-logo.png" alt="MCP Server Logo" width="100">
 </div>
 
-<a href="https://glama.ai/mcp/servers/@browserstack/mcp-server">
-  <img width="380" height="200" src="https://glama.ai/mcp/servers/@browserstack/mcp-server/badge" alt="BrowserStack server MCP server" />
-</a>
 
 <div align="center">
 <a href="https://www.npmjs.com/package/@browserstack/mcp-server">
@@ -15,18 +12,20 @@
 
 </div>
 
-<h3 align="center">One Platform For All Your Testing Needs</h4>
+<p align="center">One Platform For All Your Testing Needs</p>
+
+<div align="center">
+<a href="https://glama.ai/mcp/servers/@browserstack/mcp-server">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@browserstack/mcp-server/badge" alt="BrowserStack server MCP server" />
+</a>
+</div>
+
 <div>
-    <a href="https://www.youtube.com/watch?v=sLA7K9v7qZc">
-      <p>Check Out The Video Below For An Overview:</p>
-    </a>
     <a href="https://www.youtube.com/watch?v=sLA7K9v7qZc">
       <img src="assets/thumbnail.webp">
     </a>
   </div>
-
-## 📖 Overview
-
+  
 Enable every developer and tester in your team, whether they are testing manually, starting their automation journey, or scaling test automation.
 BrowserStack MCP Server allows you to use our cutting-edge [Test Platform](https://www.browserstack.com/test-platform) directly from your favourite AI tools.
 
