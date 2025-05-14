@@ -1,16 +1,16 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import { CallToolResult } from "@modelcontextprotocol/sdk/types.js";
-import logger from "../logger";
-import config from "../config";
-import { trackMCP } from "../lib/instrumentation";
-import { maybeCompressBase64 } from "../lib/utils";
-const { remote } = require('webdriverio');
+import logger from "../logger.js";
+import config from "../config.js";
+import { trackMCP } from "../lib/instrumentation.js";
+import { maybeCompressBase64 } from "../lib/utils.js";
+import { remote } from "webdriverio";
 
 import {
   getDevicesAndBrowsers,
   BrowserStackProducts,
-} from "../lib/device-cache";
+} from "../lib/device-cache.js";
 
 import {
   findMatchingDevice,
@@ -18,7 +18,7 @@ import {
   resolveVersion,
   validateArgs,
   uploadApp,
-} from "./appautomate-utils/appautomate";
+} from "./appautomate-utils/appautomate.js";
 
 // Types
 interface Device {
@@ -32,10 +32,6 @@ interface PlatformDevices {
   os: string;
   os_display_name: string;
   devices: Device[];
-}
-
-interface WebDriver {
-  remote(options: any): Promise<any>;
 }
 
 enum Platform {

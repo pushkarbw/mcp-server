@@ -39,11 +39,9 @@ export async function maybeCompressBase64(base64: string): Promise<string> {
 
   const sizeRatio = 1048576 / buffer.length;
   const estimatedQuality = Math.floor(sizeRatio * 100);
-  const quality = Math.min(95, Math.max(30, estimatedQuality)); 
+  const quality = Math.min(95, Math.max(30, estimatedQuality));
 
-  const compressedBuffer = await sharp(buffer)
-    .png({ quality })
-    .toBuffer();
+  const compressedBuffer = await sharp(buffer).png({ quality }).toBuffer();
 
   return compressedBuffer.toString("base64");
 }
