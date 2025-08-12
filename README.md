@@ -167,7 +167,7 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
     
       - Inside the .vscode folder, create a new file named mcp.json
       
-      - Add the Configuration: Open the mcp.json file and then add the  following JSON content. Replace <username> and <access_key> with your BrowserStack credentials.
+      - Add the Configuration: Open the mcp.json file and then add the  following JSON content. Replace the <username> and <access_key> with your BrowserStack credentials.
 
    ```json
    {
