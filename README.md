@@ -288,13 +288,13 @@ As of now we support 20 tools.
 
 ## 🧾 Test Management
 
-* 1. `createProjectOrFolder` — Create a Test Management project and/or folders to organize test cases.
+* 1. `createProjectOrFolder` — Create a Test Management project and/or folders to organize test cases. Returns with Folder ID, Project ID and Test Management Link to access the TM Project Dashboard.
   **Prompt example**
 
   ```text
   Create a new Test Management project named 'Shopping App' with two folders - Login and Checkout
   ```
-Returns with Folder ID, Project ID and Test Management Link to access the TM Project Dashboard.
+
 
 * 2. `createTestCase` — Add a manual test case under a specific project/folder (uses project identifier like PR-xxxxx and a folder ID).
   **Prompt example**
