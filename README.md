@@ -196,7 +196,7 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
     <div align="center">
       <img src="assets/select_tools.png" alt="Select Tools" height="100"> 
     </div>
-   2. Click on Add MCP Server
+   2. A tool menu would appear at the top-centre, scroll down on the     menu at the top and then Click on Add MCP Server
     <div align="center">
       <img src="assets/add_mcp_server.png" alt="Add MCP Server" height="100"> 
     </div>
