@@ -138,7 +138,12 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
 
 ## 🛠️ Installation
 
+### **One Click MCP Setup**
+
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](http://mcp.browserstack.com/one-click-setup?client=vscode) &nbsp; [![Install in Cursor](https://img.shields.io/badge/Cursor-Install_Server-24bfa5?style=flat-square&color=000000&logo=visualstudiocode&logoColor=white)](http://mcp.browserstack.com/one-click-setup?client=cursor)
+
+
+### **Alternate ways to Setup MCP server**
 
 1. **Create a BrowserStack Account**
 
@@ -150,9 +155,19 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
    - Once you have an account (and purchased appropriate plan), note down your `username` and `access_key` from [Account Settings](https://www.browserstack.com/accounts/profile/details).
 
 2. Ensure you are using Node version >= `18.0`. Check your node version using `node --version`. Recommended version: `v22.15.0` (LTS)
+
 3. **Install the MCP Server**
 
    - VSCode (Copilot - Agent Mode): `.vscode/mcp.json`:
+    
+    1. Locate or Create the Configuration File: 
+    In the root directory of your project, look for a folder named .vscode. This folder is usually hidden so you will need to find it as mentioned in the expand.
+    
+    2. If this folder doesn't exist, create it.
+    
+    3. Inside the .vscode folder, create a new file named mcp.json
+    
+    4. Add the Configuration: Open the mcp.json file and add the following JSON content. Replace <username> and <access_key> with your BrowserStack credentials.
 
    ```json
    {
@@ -172,6 +187,30 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
    - In VSCode, make sure to click on `Start` button in the MCP Server to start the server.
      ![Start MCP Server](assets/vscode_install.png)
 
+   
+   #### ** Alternate way to setup MCP on VSCode Copilot
+   
+   1. Click on the gear icon to Select Tools
+    <div align="center">
+      <img src="assets/select_tools.png" alt="Select Tools" height="100"> 
+    </div>
+   2. Click on Add MCP Server
+    <div align="center">
+      <img src="assets/add_mcp_server.png" alt="Add MCP Server" height="100"> 
+    </div>
+   3. Select NPM package (Install fron an NPM package)
+    <div align="center">
+      <img src="assets/select_npm_package.png" alt="Select NPM Package" height="100"> 
+    </div>
+   4. Enter NPM Package Name (@browserstack/mcp-server)
+    <div align="center">
+      <img src="assets/enter_npm_package.png" alt="Enter NPM Package" height="100"> 
+    </div>
+   5. Enter browserstack user name and access key
+   
+   
+   
+   
    * For Cursor: `.cursor/mcp.json`:
 
    ```json
