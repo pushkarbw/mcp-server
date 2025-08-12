@@ -136,6 +136,190 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
 ```
 
 
+
+
+
+### 💡 List of BrowserStack MCP Tools
+
+As of now we support 20 tools.
+
+
+---
+
+## 🧾 Test Management
+
+* `createProjectOrFolder` — Create a Test Management project and/or folders to organize test cases.
+  **Prompt example**
+
+  ```text
+  Create a new Test Management project named 'Shopping App' with two folders - Login and Checkout
+  ```
+Returns with Folder ID, Project ID and Test Management Link to access the TM Project Dashboard.
+
+* `createTestCase` — Add a manual test case under a specific project/folder (uses project identifier like PR-xxxxx and a folder ID).
+  **Prompt example**
+
+  ```text
+  Add a test case named 'Invalid Login Scenario' to the Login folder in the 'Shopping App' project with PR-53617, Folder ID: 117869
+  ```
+
+* `listTestCases` — List test cases for a project (supports filters like priority, status, tags).
+  **Prompt example**
+
+  ```text
+  List all high-priority test cases in the 'Shopping App' project with project_identifier: PR-59457
+  ```
+
+* `createTestRun` — Create a test run (suite) for selected test cases in a project.
+  **Prompt example**
+
+  ```text
+  Create a test run for the Login folder in the 'Shopping App' project and name it 'Release v1.0 Login Flow'
+  ```
+
+* `listTestRuns` — List test runs for a project (filter by dates, assignee, state).
+  **Prompt example**
+
+  ```text
+  List all test runs from the 'Shopping App' project that were executed last week and are currently marked in-progress
+  ```
+
+* `updateTestRun` — Partially update a test run (status, tags, notes, associated test cases).
+  **Prompt example**
+
+  ```text
+  Update test run ID 1043 in the 'Shopping App' project and mark it as complete with the note 'Regression cycle done'
+  ```
+
+* `addTestResult` — Add a manual execution result (passed/failed/blocked/skipped) for a test case within a run.
+  **Prompt example**
+
+  ```text
+  Mark the test case 'Invalid Login Scenario' as passed in test run ID 1043 of the 'Shopping App' project
+  ```
+
+* `createTestCasesFromFile` — Bulk-create test cases from an uploaded file (e.g., PDF).
+  **Prompt example**
+
+  ```text
+  Upload test cases from '/Users/pushkar/testcases.pdf' to the 'Shopping App' project in Test Management
+  ```
+
+---
+
+## ⚙️ BrowserStack SDK Setup / Automate Test
+
+* `setupBrowserStackAutomateTests` — Integrate BrowserStack SDK and run web tests on BrowserStack (optionally enable Percy).
+  **Prompt example**
+
+  ```text
+  Run my Selenium-JUnit5 tests written in Java on Chrome and Firefox. Enable Percy for visual testing.
+  ```
+
+* `fetchAutomationScreenshots` — Fetch screenshots from a given Automate/App Automate session.
+  **Prompt example**
+
+  ```text
+  Get screenshots from Automate session ID abc123xyz for my desktop test run
+  ```
+
+---
+
+## 🔍 Observability
+
+* `getFailureLogs` — Retrieve error logs for Automate/App Automate sessions (optionally by Build ID for App Automate).
+  **Prompt example**
+
+  ```text
+  Get the error logs from the session ID: 21a864032a7459f1e7634222249b316759d6827f, Build ID: dt7ung4wmjittzff8kksrjadjax9gzvbscoyf9qn of App Automate test session
+  ```
+
+---
+
+## 📱 App Live
+
+* `runAppLiveSession` — Start a manual app testing session on a real device in the cloud.
+  **Prompt example**
+
+  ```text
+  Open my app on iPhone 15 Pro Max with iOS 17. App path is /Users/pushkar/app.ipa
+  ```
+
+---
+
+## 💻 Live
+
+* `runBrowserLiveSession` — Start a Live session for website testing on desktop or mobile browsers.
+  **Prompt example**
+
+  ```text
+  Open www.google.com on the latest version of Microsoft Edge on Windows 11
+  ```
+
+---
+
+## 📲 App Automate
+
+* `takeAppScreenshot` — Launch the app on a specified device and capture a quick verification screenshot.
+  **Prompt example**
+
+  ```text
+  Take a screenshot of my app on Google Pixel 6 with Android 14 while testing on App Automate. App file path: /Users/pushkar/app-debug.apk
+  ```
+
+* `runAppTestsOnBrowserStack` — Run automated mobile tests (Espresso/XCUITest, etc.) on real devices.
+  **Prompt example**
+
+  ```text
+  Run Espresso tests from /tests/checkout.zip on Galaxy S21 and Pixel 6 with Android 14. App path is /apps/beta-release.apk under project 'Checkout Flow'
+  ```
+
+---
+
+## ♿ Accessibility
+
+* `accessibilityExpert` — Ask A11y Expert (WCAG 2.0/2.1/2.2, mobile/web usability, best practices).
+  **Prompt example**
+
+  ```text
+  What WCAG guidelines apply to form field error messages on mobile web?
+  ```
+
+* `startAccessibilityScan` — Start a web accessibility scan and return the result link.
+  **Prompt example**
+
+  ```text
+  Run accessibility scan named 'HomePage Audit' for www.example.com
+  ```
+
+---
+
+## 🤖 BrowserStack AI Agents
+
+* `fetchSelfHealedSelectors` — Retrieve AI self-healed selectors to fix flaky tests due to DOM changes.
+  **Prompt example**
+
+  ```text
+  Fetch and fix flaky test selectors in Automate session ID session_9482 using MCP
+  ```
+
+* `createLCASteps` — Generate Low Code Automation steps from a manual test case in Test Management.
+  **Prompt example**
+
+  ```text
+  Convert the manual test case 'Add to Cart' in the 'Shopping App' project into LCA steps
+  ```
+
+* `uploadProductRequirementFile` — Upload a PRD/screenshot/PDF and get a file mapping ID (used with `createTestCasesFromFile`).
+  **Prompt example**
+
+  ```text
+  Upload PRD from /Users/pushkar/Desktop/login-flow.pdf and use BrowserStack AI to generate test cases
+  ```
+
+
+
+
 ## 🛠️ Installation
 
 ### **One Click MCP Setup**
