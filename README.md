@@ -200,7 +200,7 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
     <div align="center">
       <img src="assets/add_mcp_server.png" alt="Add MCP Server" height="100"> 
     </div>
-   3. Select NPM package (Install fron an NPM package)
+   3. Select NPM package option (Install fron an NPM package) - 3rd in the list
     <div align="center">
       <img src="assets/select_npm_package.png" alt="Select NPM Package" height="100"> 
     </div>
