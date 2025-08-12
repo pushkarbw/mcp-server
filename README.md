@@ -160,14 +160,14 @@ Generate test cases from PRDs, convert manual tests to low-code automation, and 
 
    - VSCode (Copilot - Agent Mode): `.vscode/mcp.json`:
     
-    1. Locate or Create the Configuration File: 
-    In the root directory of your project, look for a folder named .vscode. This folder is usually hidden so you will need to find it as mentioned in the expand.
+      - Locate or Create the Configuration File: 
+        In the root directory of your project, look for a folder named .vscode. This folder is usually hidden so you will need to find it as mentioned in the expand.
     
-    2. If this folder doesn't exist, create it.
+      - If this folder doesn't exist, create it.
     
-    3. Inside the .vscode folder, create a new file named mcp.json
-    
-    4. Add the Configuration: Open the mcp.json file and add the following JSON content. Replace <username> and <access_key> with your BrowserStack credentials.
+      - Inside the .vscode folder, create a new file named mcp.json
+      
+      - Add the Configuration: Open the mcp.json file and then add the  following JSON content. Replace <username> and <access_key> with your BrowserStack credentials.
 
    ```json
    {
