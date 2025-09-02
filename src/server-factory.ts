@@ -11,7 +11,7 @@ import addBrowserLiveTools from "./tools/live.js";
 import addAccessibilityTools from "./tools/accessibility.js";
 import addTestManagementTools from "./tools/testmanagement.js";
 import addAppAutomationTools from "./tools/appautomate.js";
-import addFailureLogsTools from "./tools/getFailureLogs.js";
+import addFailureLogsTools from "./tools/get-failure-logs.js";
 import addAutomateTools from "./tools/automate.js";
 import addSelfHealTools from "./tools/selfheal.js";
 import addAppLiveTools from "./tools/applive.js";

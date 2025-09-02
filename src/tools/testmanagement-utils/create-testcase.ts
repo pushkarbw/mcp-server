@@ -27,6 +27,7 @@ export interface TestCaseCreateRequest {
   issue_tracker?: IssueTracker;
   tags?: string[];
   custom_fields?: Record<string, string>;
+  automation_status?: string;
 }
 
 export interface TestCaseResponse {
@@ -117,6 +118,12 @@ export const CreateTestCaseSchema = z.object({
     .record(z.string(), z.string())
     .optional()
     .describe("Map of custom field names to values."),
+  automation_status: z
+    .string()
+    .optional()
+    .describe(
+      "Automation status of the test case. Common values include 'not_automated', 'automated', 'automation_not_required'.",
+    ),
 });
 
 export function sanitizeArgs(args: any) {
@@ -125,6 +132,7 @@ export function sanitizeArgs(args: any) {
   if (cleaned.description === null) delete cleaned.description;
   if (cleaned.owner === null) delete cleaned.owner;
   if (cleaned.preconditions === null) delete cleaned.preconditions;
+  if (cleaned.automation_status === null) delete cleaned.automation_status;
 
   if (cleaned.issue_tracker) {
     if (

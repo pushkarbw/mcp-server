@@ -4,6 +4,7 @@ import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const packageJson = require("../../package.json");
 import axios from "axios";
+import globalConfig from "../config.js";
 
 interface MCPEventPayload {
   event_type: string;
@@ -14,6 +15,7 @@ interface MCPEventPayload {
     success?: boolean;
     error_message?: string;
     error_type?: string;
+    is_remote?: boolean;
   };
 }
 
@@ -43,6 +45,7 @@ export function trackMCP(
       tool_name: toolName,
       mcp_client: mcpClient,
       success: isSuccess,
+      is_remote: globalConfig.REMOTE_MCP,
     },
   };
 

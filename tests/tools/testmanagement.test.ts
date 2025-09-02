@@ -164,6 +164,7 @@ describe('createTestCaseTool', () => {
     issue_tracker: { name: 'jira', host: 'https://jira.example.com' },
     tags: ['smoke'],
     custom_fields: { priority: 'high' },
+    automation_status: 'not_automated',
   };
 
   const mockCallToolResult = {
